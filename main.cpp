@@ -58,7 +58,7 @@ int main()
     show(L1);
     L2 = filodd.filter(L1);
     show(L2);
-    int kl = remin.reduce(L2);
+    //int kl = remin.reduce(L2);
     //cout << "min L2: "<< minValue << endl;
 
 
