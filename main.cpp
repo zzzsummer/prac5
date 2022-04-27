@@ -32,35 +32,43 @@ int main()
 {
     
     const int size = 20;
-    vector<int> L(size);
-    // int a[20]= {17,18,19,20,-21,90,49,213,-321,-32,44,-244,04,45,55,94,65,76,-43,22};
-    // for (int i = 0; i < size; i++)
-    // {
-    //     L.push_back(a[i]);
-   // }
-    
-   cout << "enter 20 interger "<<endl;
-   for(int i = 0; i < size; i++)
-    {
-       cin >> L[i]; 
-    }
-   show(L); 
+    vector<int> L;
 
-    vector<int> L1 = L , L2 ,L3 ;
+//     int a[size]= {17,18,19,20,-21,90,49,213,-321,-32,44,-244,04,45,55,94,65,76,-43,22};
+//     for (int i = 0; i < size; i++)
+//     {
+//         L.push_back(a[i]);
+//    }
+    
+    cout << "enter 20 interger "<<endl;
+    int count = 0,i;
+    while (cin >> i)
+    {
+        L.push_back(i);
+        cout << "left:" << 19-count << endl;
+        count++;
+        if (count == size)
+        break;
+    }
+    
+
+    //vector<int> L1 = L , L2 ,L3 ;
     MapAbsoluteValue mapAbs;
     MapTriple mapTri;
     FilterOdd filodd;
     ReduceGCD reGCD;
-    ReduceMinimum remin;
-    L1 = mapAbs.map(L1);
-    show(L1);
-    L1 = mapTri.map(L1);
-    show(L1);
-    L2 = filodd.filter(L1);
-    show(L2);
-    //int kl = remin.reduce(L2);
-    //cout << "min L2: "<< minValue << endl;
+    ReduceMinimum reMin;
+    L = mapAbs.map(L);
+    show(L);
+    L = mapTri.map(L);
+    show(L);
+    L = filodd.filter(L);
+    show(L);
 
-
+    
+    int valGCD = reGCD.reduce(L);
+    int valMin = reMin.reduce(L);;
+    cout << valMin <<" " << valGCD << endl;
+    
     return 0;
 }
