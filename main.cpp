@@ -59,11 +59,11 @@ int main()
     ReduceGCD reGCD;
     ReduceMinimum reMin;
     L = mapAbs.map(L);
-    show(L);
+    //show(L);
     L = mapTri.map(L);
-    show(L);
+    //show(L);
     L = filodd.filter(L);
-    show(L);
+    //show(L);
 
     
     int valGCD = reGCD.reduce(L);
