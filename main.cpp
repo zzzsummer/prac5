@@ -50,7 +50,8 @@ int main()
         if (count == size)
         break;
     }
-    
+    cout << "Sample input:";
+    show (L);
 
     //vector<int> L1 = L , L2 ,L3 ;
     MapAbsoluteValue mapAbs;
@@ -71,7 +72,7 @@ int main()
     
     int valGCD = reGCD.reduce(L);
     int valMin = reMin.reduce(L);;
-    cout << valMin <<" " << valGCD << endl;
+    cout << "Output: "  << valMin << " " << valGCD << endl;
     
     return 0;
 }
