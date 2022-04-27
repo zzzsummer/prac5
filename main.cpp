@@ -56,14 +56,17 @@ int main()
     MapAbsoluteValue mapAbs;
     MapTriple mapTri;
     FilterOdd filodd;
+    FilterForTwoDigitPositive filtwo;
     ReduceGCD reGCD;
     ReduceMinimum reMin;
     L = mapAbs.map(L);
     //show(L);
     L = mapTri.map(L);
     //show(L);
+    L = filtwo.filter(L);
     L = filodd.filter(L);
     //show(L);
+     
 
     
     int valGCD = reGCD.reduce(L);
@@ -72,3 +75,4 @@ int main()
     
     return 0;
 }
+ 
