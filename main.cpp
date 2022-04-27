@@ -10,7 +10,7 @@
 #include "ReduceMinimum.h"
 #include "ReduceGCD.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
@@ -31,29 +31,15 @@ void show(vector<int> vecValue)
 int main()
 {
     
-    const int size = 20;
+    int number;
     vector<int> L;
-
-//     int a[size]= {17,18,19,20,-21,90,49,213,-321,-32,44,-244,04,45,55,94,65,76,-43,22};
-//     for (int i = 0; i < size; i++)
-//     {
-//         L.push_back(a[i]);
-//    }
-    
     cout << "enter 20 interger "<<endl;
-    int count = 0,i;
-    while (cin >> i)
-    {
-        L.push_back(i);
-        cout << "left:" << 19-count << endl;
-        count++;
-        if (count == size)
-        break;
-    }
-    cout << "Sample input:";
-    show (L);
-
-    //vector<int> L1 = L , L2 ,L3 ;
+    while (cin >> number)
+        {
+            L.push_back(number);
+        if (cin.get() == '\n')
+            break;
+        }  
     MapAbsoluteValue mapAbs;
     MapTriple mapTri;
     FilterOdd filodd;
@@ -67,13 +53,12 @@ int main()
     L = filtwo.filter(L);
     L = filodd.filter(L);
     //show(L);
-     
-
-    
     int valGCD = reGCD.reduce(L);
     int valMin = reMin.reduce(L);;
     cout << "Output: "  << valMin << " " << valGCD << endl;
     
     return 0;
 }
+ 
+
  
